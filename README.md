@@ -17,7 +17,7 @@ Whatever reason you have, if you want to make as sure as possible that you are n
 
 Probably not.
 
-The Nuxt.js core-team takes privacy already very seriously, this is shown because we ask users to explicitly opt-in. We could have added a very small footprint somewhere to explain users they can opt-out. We explicitly choose to not do that.
+The Nuxt.js core-team takes privacy already very seriously, this is shown because f.e. we ask users to explicitly opt-in instead of requiring users to opt-out. We explicitly choose to make it as easy as possible for users to opt-out of sending telemetry.
 
 We are fully aware of any privacy issues that may arise from embedding telemetry. We simply can't deny that to spent our time most efficiently we need to know how people are using Nuxt.js, including telemetry is somewhat of a necessary evil. Otherwise we risk spending weeks of our time developping a new feature which will then only be used by a small percentage of all Nuxt.js users.
 
