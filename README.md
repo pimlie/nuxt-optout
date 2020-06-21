@@ -23,7 +23,7 @@ We are fully aware of any privacy issues that may arise from embedding telemetry
 
 So we kindly ask you to enable telemetry whenever possible. Having you send us anonymous telemetry helps us greatly with knowing which parts of Nuxt.js deserves the most attentions. Also because it's the only way to ensure we are also getting feedback from people who are not active on Github or Discord.
 
-See the @nuxt/telemetry readme for more information: https://github.com/nuxt/telemetry#why-collecting-telemetry and https://github.com/nuxt/telemetry#sensitive-data
+See the [@nuxt/telemetry](https://github.com/nuxt/telemetry#why-collecting-telemetry) readme [for more information](https://github.com/nuxt/telemetry#sensitive-data)
 
 ## Why this package when I can also just opt-out of telemetry in my nuxt.config?
 
@@ -33,9 +33,11 @@ This package could be used in cases were that is a concern
 
 ## How does this package work?
 
+> Do not trust this package to work flawlessly. Also make sure to set `telemetry: false` in your nuxt.config to tell nuxt/telemetry you want to opt-out
+
 ### Using a Yarn resolution
 
-> Only works when you are using yarn as package manager and will still sent telemetry if you use npm by mistake
+> Only works when you are using yarn as package manager and could still sent telemetry if you use npm by mistake
 
 If you only use yarn you can add a resolution entry in your package.json. The default export of this package is a noop function that does nothing:
 
