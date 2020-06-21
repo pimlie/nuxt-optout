@@ -105,6 +105,8 @@ This package then does three things:
 
 To be totally honest, I can't as also this package could contain bugs.
 
+As mentioned, despite using this package you should still tell nuxt/telemetry you want to opt-out by setting `telemetry: false` in your nuxt.config
+
 ## What can I do to be even more sure?
 
 > Note that this solution is often not portable between computers and/or networks
