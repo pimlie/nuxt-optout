@@ -1,6 +1,6 @@
 {
   "name": "nuxt-optout",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Forcibly disable sending Nuxt.js telemetry",
   "main": "lib/index.js",
   "license": "MIT",
