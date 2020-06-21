@@ -1,6 +1,6 @@
 # Nuxt Optout
 
-> Forcibly opt-out of sending any telemetrics about your Nuxt.js project
+> Forcibly opt-out of sending any telemetry about your Nuxt.js project
 
 ## Why this package?
 
@@ -9,19 +9,46 @@ Since v2.13 Nuxt.js includes a telemetry module which reports anonymized data ab
 You can have multiple reasons why you want to make sure you dont share any info, for example
 - You are bound to a NDA and don't want to test if the data that is sent by Nuxt.js is considered a breach of that NDA or not
 - You don't want to share the crazy stuff you do in your Nuxt.js project
-- You just like your privacy
+- You just really like your privacy
 
-Whatever reason you have, if you want to make _as sure as possible_ that you are not sending any telemetry then you can use this module
+Whatever reason you have, if you want to make as sure as possible that you are not sending any telemetry then you can use this module
 
-## Why this package when I can also just opt-out of telemetrics in my nuxt.config?
+## Should I use this package?
 
-Bugs exists, also in Nuxt.js. Although every bug can be fixed, that could still mean that telemetrics have been sent in the mean time.
+Probably not.
+
+The Nuxt.js core-team takes privacy already very seriously, this is shown because we ask users to explicitly opt-in. We could have added a very small footprint somewhere to explain users they can opt-out. We explicitly choose to not do that.
+
+We are fully aware of any privacy issues that may arise from embedding telemetry. We simply can't deny that to spent our time most efficiently we need to know how people are using Nuxt.js, including telemetry is somewhat of a necessary evil. Otherwise we risk spending weeks of our time developping a new feature which will then only be used by a small percentage of all Nuxt.js users.
+
+So we kindly ask you to enable telemetry whenever possible. Having you send us anonymous telemetry helps us greatly with knowing which parts of Nuxt.js deserves the most attentions. Also because it's the only way to ensure we are also getting feedback from people who are not active on Github or Discord.
+
+See the @nuxt/telemetry readme for more information: https://github.com/nuxt/telemetry#why-collecting-telemetry and https://github.com/nuxt/telemetry#sensitive-data
+
+## Why this package when I can also just opt-out of telemetry in my nuxt.config?
+
+Bugs exists, also in Nuxt.js. Although every bug can be fixed, that could still mean that telemetry have been sent in the mean time.
 
 This package could be used in cases were that is a concern
 
-## How does it work?
+## How does this package work?
 
-The telemetrics in Nuxt.js are injected into your project as a [nuxt module](https://github.com/nuxt/telemetry).
+### Using a Yarn resolution
+
+> Only works when you are using yarn as package manager and will still sent telemetry if you use npm by mistake
+
+If you only use yarn you can add a resolution entry in your package.json. The default export of this package is a noop function that does nothing:
+
+```js
+// package.json
+  resolutions: {
+    "@nuxt/telemetry": "npm:nuxt-optout"
+  }
+```
+
+### Patching the installed @nuxt/telemetry package
+
+The telemetry in Nuxt.js are injected into your project as a [nuxt module](https://github.com/nuxt/telemetry).
 
 Due to how modules work in Nuxt, this package should preferably be run _before_ Nuxt.js is started. You can do this by either:
 - export an async function in your _nuxt.config.js_ and call this package in it
@@ -72,14 +99,12 @@ This package then does three things:
   - Disable telemetry by setting: `NUXT_TELEMETRY_DISABLED=true`
   - Set the telemetry endpoint to localhost: `NUXT_TELEMETRY_ENDPOINT='http://127.0.0.1'`
 
-## How can you guarantee that this package will always opt-out of telemetrics?
+## How can you guarantee that this package will always opt-out of telemetry?
 
 To be totally honest, I can't as also this package could contain bugs.
-
-And even though Nuxt.js is not [evil](https://en.wikipedia.org/wiki/Don%27t_be_evil), the maintainers could easily add counter-measures to this package if they want to
 
 ## What can I do to be even more sure?
 
 > Note that this solution is often not portable between computers and/or networks
 
-The telemetrics are send to https://telemetry.nuxtjs.com. You can add this domain to eg your host file or PiHole blocklist and have it point to _localhost_ instead.
+The telemetry are send to https://telemetry.nuxtjs.com. You can add this domain to eg your host file or PiHole blocklist and have it point to _localhost_ instead.
