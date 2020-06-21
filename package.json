@@ -1,0 +1,31 @@
+{
+  "name": "nuxt-optout",
+  "version": "0.0.1",
+  "description": "Forcibly disable sending Nuxt.js telemetry",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "bin": {
+    "nuxt-optout": "./bin/run.js",
+    "nuxt-ts-optout": "./bin/run.js"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js lib bin",
+    "test": "jest"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "dependencies": {
+    "consola": "^2.13.0",
+    "execa": "^4.0.2",
+    "fs-extra": "^9.0.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxt/telemetry": "^1.0.1",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.2.0",
+    "jest": "^26.0.1"
+  }
+}
