@@ -39,7 +39,7 @@ This package could be used (and should only be used) in cases were that is a con
 
 > Only works when you are using yarn as package manager and could still sent telemetry if you use npm by mistake
 
-If you only use yarn you can add a resolution entry in your package.json. The default export of this package is a noop function that does nothing:
+If you only use yarn you can add a resolution entry in your package.json:
 
 ```js
 // package.json
