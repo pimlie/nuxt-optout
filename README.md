@@ -19,9 +19,9 @@ Probably not.
 
 The Nuxt.js core-team takes privacy already very seriously, this is shown because f.e. we ask users to explicitly opt-in instead of requiring users to opt-out. We explicitly choose to make it as easy as possible for users to opt-out of sending telemetry.
 
-We are fully aware of any privacy issues that may arise from embedding telemetry. We simply can't deny that to spent our time most efficiently we need to know how people are using Nuxt.js, including telemetry is somewhat of a necessary evil. Otherwise we risk spending weeks of our time developping a new feature which will then only be used by a small percentage of all Nuxt.js users.
+We are fully aware of any privacy issues that may arise from embedding telemetry. Including telemetry is somewhat of a necessary evil, we simply can't deny that to spent our time most efficiently we need to know how people are using Nuxt.js. Otherwise we risk spending weeks of our time developping a new feature which will then only be used by a small fraction of all Nuxt.js users.
 
-So we kindly ask you to enable telemetry whenever possible. Having you send us anonymous telemetry helps us greatly with knowing which parts of Nuxt.js deserves the most attentions. Also because it's the only way to ensure we are also getting feedback from people who are not active on Github or Discord.
+So we kindly ask you to enable telemetry whenever possible. Having you send us anonymous telemetry helps us greatly with knowing which parts of Nuxt.js deserves the most attention. Also because it gives us some assurance that we are also collecting feedback from people who are not active on Github or Discord.
 
 See the [@nuxt/telemetry](https://github.com/nuxt/telemetry#why-collecting-telemetry) readme [for more information](https://github.com/nuxt/telemetry#sensitive-data)
 
@@ -29,7 +29,7 @@ See the [@nuxt/telemetry](https://github.com/nuxt/telemetry#why-collecting-telem
 
 Bugs exists, also in Nuxt.js. Although every bug can be fixed, that could still mean that telemetry have been sent in the mean time.
 
-This package could be used in cases were that is a concern
+This package could be used (and should only be used) in cases were that is a concern
 
 ## How does this package work?
 
